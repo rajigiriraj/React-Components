@@ -1,19 +1,349 @@
-.App {
+.container{
+  display: flex;
+  justify-content: space-between;
+}
+
+/* container-1 */
+
+.container-1{
+  width: 30%;
+}
+.mainclass{
+  display: flex;
+  margin: 10px;
+  position: relative;
+}
+.mainclass input{
+  padding: 20px;
+  width: 300px;
+  display: flex;
+  border: none;
+  justify-content: space-between;
+}
+.mainclass button{
+  border: none;
+  width: 50px;
+  background-color: white;
+  margin: 0;
+}
+.searchstate button{
+ background-color: rgb(69, 153, 164);
+}
+.stateclass{
+  background-color: white;
+  margin: 1px 10px;
+  padding: 20px;
+  width: 350px;
+  font-size: 14px;
+  color: rgb(109, 109, 109);
+  display: flex;
+  justify-content: space-between;
+}
+.stateclass button{
+  width: 30px;
+  color:rgb(102, 103, 103) ;
+}
+/* container-2 */
+
+.container-2{
+  width: 30%;
+  padding: 10px;
+}
+.contact{
+  background-color: white;
+  display: flex;
+  height: 55px;
+}
+.contact span{
+  height: 50px;
+  width: 50px;
+}
+.contact .details{
+  margin-left: 10px;
+  width: 400px;
+}
+.contact h3{
+  margin: 0;
+  color: rgb(69, 153, 164);
+}
+.contact p{
+  margin: 0;
+}
+.contact button{
+  border: none;
+  width: 80px;
+  background-color: white;
+  border-left: solid 1px rgb(204, 201, 201);
+}
+.reviews{
+  display: flex;
+  justify-content: space-between;
+  margin-top: 10px;
+}
+.reviews p{
+  margin: 0;
+}
+.review{
+  padding-top: 5px;
+  background-color: white;
+  width: 65px;
+  height: 50px;
+  align-items: center;
   text-align: center;
 }
-
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.review2{
+  background-color:rgb(69, 153, 164);
+}
+.range1{
+  height: 55px;
+  width: 431px;
+  background-color: white;
+  margin-top: 12px;
+}
+.range1 input{
+  text-align: center;
+  margin: 20px;
+  width: 370px;
+}
+.range2{
+  height: 55px;
+  width: 430px;
+  margin-top: 12px;
+}
+.range2 input{
+  text-align: center;
+  margin: 20px;
+  width: 370px;
+}
+.menu{
+  display: flex;
+  margin-top: 42px;
+  padding-top: 5px;
+  background-color: white;
+  width: 430px;
+  height: 50px;
+  align-items: center;
+  text-align: center;
+  background-color: rgb(69, 153, 164);
+}
+.menu button{
+  width: 50px;
+  height: 55px;
+  background-color:rgb(35, 120, 131);
+  border: 0;
+  margin-top: -5px;
+}
+.menu label{
+  width: 350px;
+  color: white;
+}
+.video{
+  margin-top: 60px;
+}
+.play{
+  background-color: white;
+  width: 430px;
+  height: 50px;
+  margin-top: -5px;
+}
+.play button{
+  width: 50px;
+  height: 50px;
+  color:rgb(69, 153, 164);
+  background-color: white;
+  font-size: 20px;
+  border: 0;
+  margin-top: 0px;
+  border-right: solid 1px rgb(204, 201, 201);
+}
+.play input{
+  text-align: center;
+  width: 350px;
+  margin-left: 10px;
+  color: rgb(69, 153, 164);
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+/* container-3 */
+.container-3{
+  width: 30%;
+  padding: 10px;
 }
 
-.App-header {
+/* NEW WINDOW */
+.window{
+  background-color: rgb(69, 153, 164);
+  color: white;
+  height: 50px;
+  padding: 2px;
+  text-align: center;
+}
+.window h3{
+  margin: 10px;
+  align-items: center;
+
+}
+/* BACK BUTTON */
+.back{
+  background-color: rgb(69, 153, 164);
+  color: white;
+  height: 50px;
+  padding: 3px 0px;
+  text-align: center;
+  margin-top: 10px;
+  display: flex;
+  /* justify-content: space-between; */
+}
+.back button{
+  width: 50px;
+  height: 55px;
+  background-color:rgb(35, 120, 131);
+  color: white;
+  font-size: 25px;
+  border: 0;
+  margin-top: -2px;
+}
+.back h3{
+  margin-left: 80px;
+  margin-top: 10px;
+}
+.log{
+  display: flex;
+  justify-content: space-between;
+}
+.login{
+  margin-top: 10px;
+  height: 52px;
+  width: 200px;
+  padding: 2px;
+  text-align: center;
+}
+.logout h3{
+  margin-left: 40px;
+  padding-right: 50px;
+  margin-top: 10px;
+}
+.icons{
+  margin-top: 10px;
+  display: flex;
+  justify-content: space-between;
+}
+.add-minus{
+  display: flex;
+}
+.add-minus button{
+  margin-right: 10px;
+  border: 0;
+}
+.bkw-fwd{
+  display: flex;
+}
+.bkw-fwd button{
+  margin-left: 10px;
+  border: 0;
+}
+.icon button{
+  height: 50px;
+  width: 50px;
+  
+}
+.radio-checked{
+  margin-top: 40px;
+  display: flex;
+}
+.radio-checked span{
+  color: rgb(102, 103, 103);
+}
+.radio-check {
+  display: flex;
+}
+.radio-check button{
+  background-color: rgb(204, 201, 201);
+  border: 0;
+  height: 30px;
+  width: 30px;
+  padding-left: 0;
+}
+.radio-check h3{
+  margin: 0;
+}
+.column2{
+ margin-left: 70px;
+}
+
+.toggle-off{
+  display: flex;
+  margin-top: 20px;
+}
+.toggle-off button{
+  display: flex;
+  justify-content: space-between;
+  border: 0;
+  margin: 20px;
+  padding-top: 5px;
+  padding-right: 20px;
+  border-radius: 20px;
+  width: 90px;
+  height: 35px;
+  color:rgb(102, 103, 103) ;
+}
+.toggle-on{
+  display: flex;
+  margin-top: 30px;
+}
+.toggle-on button{
+  display: flex;
+  justify-content: space-between;
+  border: 0;
+  padding: 5px;
+  padding-left: 20px;
+  margin: 20px;
+  border-radius: 20px;
+  width: 90px;
+  height: 35px;
+  background-color: rgb(69, 153, 164);
+  color: white;
+}
+.toggle-on button h3{
+  margin: 0;
+  padding-right: 10px;
+  font-size: 20px;
+}
+.toggle-off button h3{
+  margin: 0;
+  padding-left: 10px;
+  font-size: 20px;
+}
+.toggleOff-bg{
+  background-color: white;
+}
+.toggleOff-bg button{
+  background-color: rgb(207, 204, 204);
+}
+.toggleOn-bg{
+  background-color: white;
+}
+.toggleOn-bg button{
+  background-color: rgb(207, 204, 204);
+  color:rgb(69, 153, 164) ;
+}
+.stars{
+  display: flex;
+  background-color: white;
+  padding:10px 10px 10px 30px;
+  width: 350px;
+  margin-top: 20px;
+}
+.star-left p{
+  margin: 0;
+  color: rgb(102, 103, 103);
+}
+.stars-right span{
+  margin-left: 40px;
+}
+.stars-right{
+  margin-top: 10px;
+}
+/* .App-header {
   background-color: #282c34;
   min-height: 100vh;
   display: flex;
@@ -22,17 +352,5 @@
   justify-content: center;
   font-size: calc(10px + 2vmin);
   color: white;
-}
+} */
 
-.App-link {
-  color: #61dafb;
-}
-
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
-}

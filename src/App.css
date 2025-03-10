@@ -43,6 +43,9 @@
   width: 30px;
   color:rgb(102, 103, 103) ;
 }
+.password input{
+  font-size: 20px;
+}
 /* container-2 */
 
 .container-2{
@@ -104,6 +107,7 @@
   text-align: center;
   margin: 20px;
   width: 370px;
+  accent-color: rgb(69, 153, 164);
 }
 .range2{
   height: 55px;
@@ -114,6 +118,7 @@
   text-align: center;
   margin: 20px;
   width: 370px;
+  accent-color: rgb(69, 153, 164);
 }
 .menu{
   display: flex;
@@ -160,7 +165,7 @@
   text-align: center;
   width: 350px;
   margin-left: 10px;
-  color: rgb(69, 153, 164);
+  accent-color: rgb(69, 153, 164);
 }
 
 /* container-3 */

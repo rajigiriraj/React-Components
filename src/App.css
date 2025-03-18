@@ -43,9 +43,6 @@
   width: 30px;
   color:rgb(102, 103, 103) ;
 }
-.password input{
-  font-size: 20px;
-}
 /* container-2 */
 
 .container-2{
@@ -178,9 +175,11 @@
 .window{
   background-color: rgb(69, 153, 164);
   color: white;
-  height: 50px;
+  height: 56px;
   padding: 2px;
   text-align: center;
+  border: none;
+  width: 100%;
 }
 .window h3{
   margin: 10px;
@@ -217,7 +216,7 @@
 }
 .login{
   margin-top: 10px;
-  height: 52px;
+  height: 56px;
   width: 200px;
   padding: 2px;
   text-align: center;
@@ -249,8 +248,8 @@
 .icon button{
   height: 50px;
   width: 50px;
-  
 }
+/* RADIO BUTTONS */
 .radio-checked{
   margin-top: 40px;
   display: flex;
@@ -275,6 +274,7 @@
  margin-left: 70px;
 }
 
+/* TOGGLE */
 .toggle-off{
   display: flex;
   margin-top: 20px;
@@ -348,14 +348,5 @@
 .stars-right{
   margin-top: 10px;
 }
-/* .App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
-} */
+
 

@@ -1,10 +1,14 @@
-import React from 'react';
-import { RxSize } from 'react-icons/rx';
-export default function SearchName({label,icon}) {
+import { useState } from "react"
+
+export default function SearchName({label,icon,fontsize,type}) {
+  let [inputvalue,setinputvalue]=useState('');
+  const handledelete=()=>{
+    setinputvalue('');
+  }
   return (
     <div className='mainclass search-name'>
-        <input placeholder={label}></input>
-        <button>{icon}</button>
+        <input placeholder={label} type={type} onChange={(e)=>setinputvalue(e.target.value)} value={inputvalue} style={{fontSize:fontsize}}></input>
+        <button onClick={handledelete}>{icon}</button>
     </div>
   )
 }

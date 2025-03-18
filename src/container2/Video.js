@@ -8,7 +8,7 @@ export default function Video() {
         <img src={componentImg} width={430} height={200}></img>
         <div className='play'>
             <button><FaPlay /></button>
-            <input type='range' value={0}></input>
+            <input type='range'></input>
         </div>
         
     </div>

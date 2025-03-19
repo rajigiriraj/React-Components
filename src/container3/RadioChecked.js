@@ -32,10 +32,6 @@ export default function RadioChecked({text,ischeckedRounded,icon,rounded,isCheck
             iconSquared?<FaRegCheckSquare color='rgb(35, 120, 131)' size={20}/>:<MdOutlineCheckBoxOutlineBlank color='rgb(35, 120, 131)' size={20}/>
           )}
         </button>)}
-       
-          
-        
-
         <h3>{text}</h3>
     </div>
   )

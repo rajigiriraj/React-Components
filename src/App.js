@@ -14,14 +14,12 @@ import Toggle from './container3/Toggle.js';
 import ToggleOff from './container3/ToggleOff.js';
 import Ratings from './container2/Ratings.js';
 
-
 import { RxCrossCircled } from "react-icons/rx";
 import { IoIosContact } from "react-icons/io";
 import { IoMdSearch } from "react-icons/io";
 import { FaLock } from "react-icons/fa6";
 import { FaCaretDown } from "react-icons/fa6";
 import { FaStar } from "react-icons/fa";
-import { BiSolidMessageRounded } from "react-icons/bi";
 import { SlCalender } from "react-icons/sl";
 import { FaHeart } from "react-icons/fa";
 import { IoIosThumbsUp } from "react-icons/io";
@@ -32,7 +30,6 @@ import { FaPlus } from "react-icons/fa";
 import { IoIosArrowBack } from "react-icons/io";
 import { IoIosArrowForward } from "react-icons/io";
 import { FaRegCheckSquare } from "react-icons/fa";
-
 import { CgRadioChecked } from "react-icons/cg";
 import { TiTick } from "react-icons/ti";
 import { ImCross } from "react-icons/im";
@@ -42,38 +39,136 @@ import './App.css';
 
 
 function App() {
+  const searchNames=[
+    {
+      id:1,
+      label:'QUICK SEARCH' ,
+      icon:[<RxCrossCircled size={25} color='rgb(102, 103, 103)'/>], 
+      type:'name'
+    },
+    {
+      id:2,
+      label:'USER NAME' ,
+      icon:[<IoIosContact size={25}color='rgb(102, 103, 103)'/>], 
+      type:'name'
+    },
+    {
+      id:3,
+      label:'*************' ,
+      icon:[<FaLock size={20}color='rgb(102, 103, 103)'/>], 
+      fontsize:20,
+      type:'name'
+    }
+  ]
+  const searchStates=[
+    {
+      id:1,
+      search:'SEARCH',
+      icon:[<IoMdSearch size={25}color='white' />]
+    },
+    {
+      id:2,
+      search:'SELECT STATE',
+      icon:[<FaCaretDown size={25}color='white' />]
+    }
+  ]
+  const states=[
+    {
+      id:1,
+      state:'ALABAMA',
+      color:'rgb(102, 103, 103)'
+    },
+    {
+      id:2,
+      state:'ALASKA',
+      color:'rgb(69, 153, 164)'
+    },
+    {
+      id:3,
+      state:'ARIZONA',
+      color:'rgb(102, 103, 103)'
+    }
+  ]
+
+  const ranges=[
+    {
+      id:1,
+      cls:1
+    },
+    {
+      id:2,
+      cls:2
+    }
+  ]
+  const ratings=[
+    {
+      icon:[<FaStar size={20} color='rgb(45, 137, 149)'/>],
+      text:'3.6'
+    },
+    {
+      icon:[<SlCalender size={20} color='rgb(102, 103, 103)'/>],
+      bgclr:'rgb(45, 137, 149)'
+    },
+    {
+      icon:[<FaStar size={20} color='rgb(45, 137, 149)'/>],
+      text:'27'
+    },
+    {
+      icon:[<FaHeart size={20} color='rgb(102, 103, 103)'/>],
+      text:'3.6'
+    },
+    {
+      icon:[<IoIosThumbsUp size={30} color='rgb(102, 103, 103)'/>]
+    }
+  ]
   return (
     <div className='container'>
       <div className='container-1'>
-        <SearchName label='QUICK SEARCH' icon={<RxCrossCircled size={25} color='rgb(102, 103, 103)'/>} type='name'/>
-        <SearchName label="USER NAME" icon={<IoIosContact size={25}color='rgb(102, 103, 103)'/>} type='name'/>
-        <SearchName 
-          label='*************' 
-          icon={<FaLock size={20}color='rgb(102, 103, 103)'/>} 
-          fontsize={20}
-          type='password'/>
-        <SearchState search='SEARCH' icon={<IoMdSearch size={25}color='white' />}/>
+        {searchNames.map(searchName=>{
+          return(
+            <SearchName 
+              label={searchName.label}
+              icon={searchName.icon} 
+              fontsize={searchName.fontsize} 
+              type={searchName.type}/>
+          )
+        })}
+
+        {searchStates.map(searchState=>{
+          return(
+            <>
+              <SearchState search={searchState.search} icon={searchState.icon}/>
+              <br/>
+            </>
+          )
+        })}
+        {/* <SearchState search='SEARCH' icon={<IoMdSearch size={25}color='white' />}/>
         <br></br>
         <SearchState search='SELECT STATE' icon={<FaCaretDown size={25}color='white' />}/>
-        <br></br>
+        <br></br> */}
         <SearchState search='SELECT STATE' icon={<FaCaretDown size={25}color='white'/>}/>
-        <State12 state='ALABAMA' color='rgb(102, 103, 103)'/>
-        <State12 state='ALASKA'color='rgb(69, 153, 164)'/>
-        <State12 state='ARIZONA' color='rgb(102, 103, 103)'/>
+        {states.map(state=>{
+          return(
+          <State12 state={state.state} color={state.color} id={state.id}/>
+        )})}
+
       </div>
+
       <div className='container-2'>
         <Contact/>
         <div  className='reviews'>
-        <Ratings icon={<FaStar size={20} color='rgb(45, 137, 149)'/>} text={3.6}/>
-        <Ratings icon={<SlCalender size={20} color='rgb(102, 103, 103)'/>} bgclr='rgb(45, 137, 149)'/>
-        <Ratings icon={<BiSolidMessageRounded size={20} color='rgb(45, 137, 149)'/>} text={27}/>
-        <Ratings icon={<FaHeart size={20} color='rgb(102, 103, 103)'/>} text={3.6}/>
-        <Ratings icon={<IoIosThumbsUp size={30} color='rgb(102, 103, 103)'/>}/>
-
+          {ratings.map(rating=>{
+            return(
+              <Ratings icon={rating.icon} text={rating.text} bgclr={rating.bgclr}/>
+            )
+          }
+          )}
         </div>
-        
-        <Range cls={1} value={0}/>
-        <Range cls={2} value={50}/>
+        {ranges.map(range=>{
+          return(
+            <Range cls={range.cls}/>
+          )
+        })}
         <Menu />
         <Video/>
       </div>
@@ -107,14 +202,14 @@ function App() {
           </div>
         </div>
         <div className='toggle-on'>
-          <Toggle text={'ON'} className={'toggleOn-bg'}/>
-          <Toggle text={'ON'}/>
-          <Toggle text={<TiTick size={30}/>}/>
+          <Toggle text={'ON'} className={'toggleOn-bg'} isOn={true} falsetext='OFF'/>
+          <Toggle text={'ON'} isOn={true} falsetext='OFF'/>
+          <Toggle text={<TiTick size={30}/>} isOn={true} falsetext='OFF'/>
         </div>
         <div className='toggle-off'>
-          <ToggleOff text={'OFF'} className={'toggleOff-bg'}/>
-          <ToggleOff text={'OFF'}/>
-          <ToggleOff text={<ImCross size={23}/>}/>
+          <ToggleOff text={'OFF'} className={'toggleOff-bg'} isOff={true} ontext='ON'/>
+          <ToggleOff text={'OFF'} isOff={true} ontext='ON'/>
+          <ToggleOff text={<ImCross size={23}/>} isOff={true} ontext='ON'/>
         </div>
         <div className='stars '>
           <StarRatings color={'rgb(35, 120, 131)'} rating='3.6' classname='star-left'/>
